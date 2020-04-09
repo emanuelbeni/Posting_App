@@ -3,13 +3,11 @@ import {
 	FETCH_POSTS,
 	FETCH_POST,
 	EDIT_POST,
-	DELETE_POST
+	DELETE_POST,
 } from "../Actions/ActionTypes";
 import _ from "lodash";
 
-const INITIAL_STATE = { state: {} };
-
-export default (state = INITIAL_STATE, action) => {
+export default (state = {}, action) => {
 	switch (action.type) {
 		case CREATE_POST:
 			return { ...state, [action.payload.id]: action.payload };
